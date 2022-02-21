@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] intArray = new int[]{ 5,6,7,2,4 };
+        int[] intArray = new int[] { 5,6,7,2,4 };
 
         sortArray(intArray);
         for (int i : intArray) {
@@ -14,20 +14,20 @@ public class Main {
     }
 
     private static int[] sortArray(int[] sortedArray) {
-        int[] baseArray = sortedArray;
-        int iteration = 0;
 
-            for (int i : baseArray) {
-                int currentValue = i;
-                int nextIteration = iteration+1;
-                int nextValue = baseArray[nextIteration];
-                    if (currentValue > nextValue) {
-                        int tempInt = baseArray[nextIteration];
-                        baseArray[nextIteration] = currentValue;
-                        baseArray[iteration] = tempInt;
-//                        iteration++;
+        int arraySize = sortedArray.length - 1;
+            for (int i =0; i < arraySize; i++) {
+
+                for (int j=0; j < arraySize - i; j++) {
+
+                    if (sortedArray[j] > sortedArray[j + 1]) {
+                        int temp = sortedArray[j];
+                        sortedArray[j] = sortedArray[j + 1];
+                        sortedArray[j + 1] = temp;
+
                     }
+                }
             }
-        return baseArray;
+        return sortedArray;
     }
 }
