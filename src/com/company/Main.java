@@ -7,13 +7,13 @@ public class Main {
 
         int[] intArray = new int[] { 5,6,7,2,4 };
 
-        sortArray(intArray);
+        bubbleSort(intArray);
         for (int i : intArray) {
             System.out.println(i);
         }
     }
 
-    private static int[] sortArray(int[] sortedArray) {
+    private static int[] bubbleSort(int[] sortedArray) {
 
         int arraySize = sortedArray.length - 1;
             for (int i =0; i < arraySize; i++) {
