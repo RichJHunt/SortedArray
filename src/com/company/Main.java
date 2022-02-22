@@ -9,20 +9,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int [] arrayToSort;
+        int[] arrayToSort;
         arrayToSort = bubbleSort(createArray(sizeOfArray));
         for (int i : arrayToSort) {
             System.out.println(i);
         }
     }
 
-    private static int [] createArray(int sizeOfArray) {
+    private static int[] createArray(int sizeOfArray) {
 
         Random rand = new Random();
         int[] createdArray = new int[sizeOfArray];
 
-        for (int i=0; i < sizeOfArray - i; i++) {
+        for (int i = 0; i < sizeOfArray; i++) {
+
             createdArray[i] = rand.nextInt(numberRange);
+
         }
 
         return createdArray;
@@ -32,18 +34,18 @@ public class Main {
         System.out.println("\n before \n");
         printArray(sortedArray);
         int arraySize = sortedArray.length - 1;
-            for (int i =0; i < arraySize; i++) {
+        for (int i = 0; i < arraySize; i++) {
 
-                for (int j=0; j < arraySize - i; j++) {
+            for (int j = 0; j < arraySize - i; j++) {
 
-                    if (sortedArray[j] > sortedArray[j + 1]) {
-                        int temp = sortedArray[j];
-                        sortedArray[j] = sortedArray[j + 1];
-                        sortedArray[j + 1] = temp;
+                if (sortedArray[j] > sortedArray[j + 1]) {
+                    int temp = sortedArray[j];
+                    sortedArray[j] = sortedArray[j + 1];
+                    sortedArray[j + 1] = temp;
 
-                    }
                 }
             }
+        }
         System.out.println("\n after \n");
         return sortedArray;
     }
