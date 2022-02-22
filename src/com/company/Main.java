@@ -28,7 +28,8 @@ public class Main {
     }
 
     private static int[] bubbleSort(int[] sortedArray) {
-
+        System.out.println("\n before \n");
+        printArray(sortedArray);
         int arraySize = sortedArray.length - 1;
             for (int i =0; i < arraySize; i++) {
 
@@ -42,6 +43,14 @@ public class Main {
                     }
                 }
             }
+        System.out.println("\n after \n");
         return sortedArray;
+    }
+
+    private static void printArray(int[] sortedArray) {
+        for (int i : sortedArray) {
+            System.out.println(i);
+        }
+
     }
 }
