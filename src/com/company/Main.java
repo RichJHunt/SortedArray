@@ -1,16 +1,30 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
 
     public static void main(String[] args) {
 
-        int[] intArray = new int[] { 5,6,7,2,4 };
-
-        bubbleSort(intArray);
-        for (int i : intArray) {
+        int sizeOfArray = 1000;
+        int [] arrayToSort;
+        arrayToSort = bubbleSort(createArray(sizeOfArray));
+        for (int i : arrayToSort) {
             System.out.println(i);
         }
+    }
+
+    private static int [] createArray(int sizeOfArray) {
+
+        Random rand = new Random();
+        int[] createdArray = new int[sizeOfArray];
+
+        for (int i=0; i < sizeOfArray - i; i++) {
+            createdArray[i] = rand.nextInt(1000);
+        }
+
+        return createdArray;
     }
 
     private static int[] bubbleSort(int[] sortedArray) {
