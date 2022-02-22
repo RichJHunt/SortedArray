@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class Main {
 
+    public static int sizeOfArray = 1000;
+    public static int numberRange = 1000;
 
     public static void main(String[] args) {
 
-        int sizeOfArray = 1000;
         int [] arrayToSort;
         arrayToSort = bubbleSort(createArray(sizeOfArray));
         for (int i : arrayToSort) {
@@ -21,7 +22,7 @@ public class Main {
         int[] createdArray = new int[sizeOfArray];
 
         for (int i=0; i < sizeOfArray - i; i++) {
-            createdArray[i] = rand.nextInt(1000);
+            createdArray[i] = rand.nextInt(numberRange);
         }
 
         return createdArray;
